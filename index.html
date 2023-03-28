@@ -1,84 +1,112 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<title>学习资源推荐</title>
 	<style>
 		body {
-			font-family: Arial, sans-serif;
-			background-color: #f5f5f5;
+			font-family: Arial, Helvetica, sans-serif;
 			margin: 0;
 			padding: 0;
 		}
-		
-		header {
-			background-color: #333;
-			color: #fff;
+		#container {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		#sidebar {
+			flex: 1;
+			background-color: #f1f1f1;
 			padding: 20px;
+		}
+		#main-content {
+			flex: 4;
+			padding: 20px;
+		}
+		h1 {
 			text-align: center;
 			font-size: 36px;
-			font-weight: bold;
 			margin-bottom: 20px;
 		}
-		
-		.container {
-			max-width: 800px;
-			margin: 0 auto;
-			padding: 20px;
-			background-color: #fff;
-			box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-		}
-		
 		h2 {
 			font-size: 24px;
-			margin-top: 0;
+			margin-top: 40px;
+			margin-bottom: 20px;
 		}
-		
+		h3 {
+			font-size: 18px;
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
 		ul {
-			list-style: none;
+			list-style-type: none;
 			padding: 0;
 			margin: 0;
 		}
-		
 		li {
-			margin: 10px 0;
-			padding: 10px;
-			background-color: #eee;
-			border-radius: 5px;
-			box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+			margin-top: 10px;
 		}
-		
 		a {
-			color: #333;
 			text-decoration: none;
+			color: #333;
+		}
+		a:hover {
+			color: #009688;
+		}
+		.link {
+			color: #009688;
 			font-weight: bold;
 		}
 	</style>
 </head>
 <body>
-	<header>学习资源推荐</header>
-	
-	<div class="container">
-		<h2>编程学习</h2>
-		<ul>
-			<li><a href="#">推荐链接 1</a></li>
-			<li><a href="#">推荐链接 2</a></li>
-			<li><a href="#">推荐链接 3</a></li>
-		</ul>
-		
-		<h2>英语学习</h2>
-		<ul>
-			<li><a href="#">推荐链接 4</a></li>
-			<li><a href="#">推荐链接 5</a></li>
-			<li><a href="#">推荐链接 6</a></li>
-		</ul>
-		
-		<h2>数学学习</h2>
-		<ul>
-			<li><a href="#">推荐链接 7</a></li>
-			<li><a href="#">推荐链接 8</a></li>
-			<li><a href="#">推荐链接 9</a></li>
-		</ul>
+	<div id="container">
+		<div id="sidebar">
+			<h2>目录</h2>
+			<ul>
+				<li><a href="#programming">编程学习</a></li>
+				<li><a href="#english">英语学习</a></li>
+				<li><a href="#math">数学学习</a></li>
+				<li><a href="#chinese">语文学习</a></li>
+				<li><a href="#politics">政治学习</a></li>
+			</ul>
+		</div>
+		<div id="main-content">
+			<h1>学习资源推荐</h1>
+			<h2 id="programming">编程学习</h2>
+			<ul>
+				<li><a href="#" class="link">Codecademy</a></li>
+				<li><a href="#" class="link">LeetCode</a></li>
+				<li><a href="#" class="link">GitHub</a></li>
+			</ul>
+
+			<h2 id="english">英语学习</h2>
+			<ul>
+				<li><a href="#" class="link">Duolingo</a></li>
+				<li><a href="#" class="link">Quizlet</a></li>
+				<li><a href="#" class="link">English Central</a></li>
+			</ul>
+
+			<h2 id="math">数学学习</h2>
+			<ul>
+				<li><a href="#" class="link">Khan Academy</a></li>
+				<li><a href="#" class="link">Wolfram Alpha</a></li>
+				<li><a href="#" class="link">Desmos</a></li>
+			</ul>
+
+			<h2 id="chinese">语文学习</h2>
+			<ul>
+				<li><a href="#" class="link">汉字书写</a></li>
+				<li><a href="#" class="link">语文阅读</a></li>
+				<li><a href="#" class="link">古文阅读</a></li>
+			</ul>
+
+			<h2 id="politics">政治学习</h2>
+			<ul>
+				<li><a href="#" class="link">中国共产党历史</a></li>
+				<li><a href="#" class="link">中华人民共和国宪法</a></li>
+				<li><a href="#" class="link">《习近平谈治国理政》</a></li>
+			</ul>
+		</div>
 	</div>
 </body>
 </html>
