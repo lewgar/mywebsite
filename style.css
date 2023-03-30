@@ -1,0 +1,167 @@
+/* 将所有元素的外边距和内边距都设置为0 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 设置页面背景图片 */
+body {
+  background-image: url(background.jpg);
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+/* 设置导航栏的样式 */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+nav ul li {
+  margin-bottom: 20px;
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+}
+
+nav li {
+  padding: 10px;
+  text-align: center;
+}
+
+nav li:hover {
+  background-color: #555;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 设置页面主体的样式 */
+main {
+  margin: 50px 0 0 200px;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* 设置侧栏容器的样式 */
+aside {
+  position: fixed;
+  top: 20px;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 设置 iframe 的样式 */
+iframe {
+  border: none;
+}
+
+/* 设置课程列表的样式 */
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.course-list li {
+  width: calc(46% - 20px);
+  margin: 10px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.course-list li:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.course-list a {
+  color: green;
+  text-decoration: none;
+  position: relative;
+  padding-right: 1em; /* 增加右内边距为1em */
+}
+
+.course-list a:after {
+  content: "\2192";
+  position: absolute;
+  right: 0; /* 将箭头向右移动一些 */
+  top: 50%;
+  transform: translateY(-50%);
+  }
+
+/* 设置搜索框的样式 */
+.search-box {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.search-box input[type="text"] {
+  width: 200px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+}
+
+.search-box input[type="submit"] {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-box input[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* 设置 CSDN 热点咨询的样式 */
+.hot-news {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.hot-news h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.hot-news ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.hot-news li {
+  margin: 10px 0;
+}
+
+.hot-news a {
+  color: #333;
+  text-decoration: none;
+}
+
+.hot-news a:hover {
+  text-decoration: underline;
+}
