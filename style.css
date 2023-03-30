@@ -110,9 +110,10 @@ iframe {
 
 /* 设置搜索框的样式 */
 .search-box {
-  position: fixed;
+  //position: fixed;
   top: 20px;
   right: 20px;
+  padding: 15px;
 }
 
 .search-box input[type="text"] {
