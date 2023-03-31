@@ -93,7 +93,7 @@ iframe {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-.course-list a {
+.course-list a [target="_blank"]{
   color: green;
   text-decoration: none;
   position: relative;
