@@ -158,7 +158,7 @@ iframe {
   margin: 10px 0;
 }
 
-.hot-news a {
+.hot-news a [target="_blank"]{
   color: #333;
   text-decoration: none;
 }
