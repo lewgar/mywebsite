@@ -1,181 +1,205 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
-<head >
+<html lang="zh-cn" >
+<head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="300">
-  <title>学习网站</title>
-  <link rel="stylesheet" href="style.css">
+  <title>I LOVE YOU</title>
+  <link rel="stylesheet" href="./style.css">
+<style>
+/*//////STYLESHEET FOR BEATING HEART WITH TEXT //////*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    font-size: 83.3%;
+}
+body {
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Courier;
+    background-color: #262626;
+}
+.typing {
+    position: relative;
+    bottom: 35%;
+    color: white;
+}
+.typing:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 13px;
+    border-right: 2px solid white;
+    right: -5px;
+    top: 1px;
+    animation: blink 0.5s infinite ease;
+
+}
+.heart {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #ff3838;
+    transform: rotate(45deg);
+    animation: beatHeart 1.4s linear infinite
+}
+.heart:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff3838;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+.heart:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff3838;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+@keyframes beatHeart {
+    0% { transform: rotate(45deg) scale(1); }
+    25% { transform: rotate(45deg) scale(1); }
+    30% { transform: rotate(45deg) scale(1.4); }
+    50% { transform: rotate(45deg) scale(1.2); }
+    70% { transform: rotate(45deg) scale(1.4); }
+    100% { transform: rotate(45deg) scale(1); }
+}
+@keyframes blink {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
+
+/*--- For-phone-only ---*/
+    @media (max-width: 599px) {
+        .typing {
+            bottom: 35%;
+        }
+    }
+
+/*--- Tablets-Portrait-Up ---*/
+@media (min-width: 37.5em) {
+    html {
+        font-size: 110%;
+    }
+    .typing {
+        bottom: 33%;
+    }
+    .typing:after {
+        width: 5px;
+        height: 21px;
+    }
+    .heart {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/*--- Tablets-Landscape-Up ---*/
+@media (min-width: 56.25em) {
+    html {
+        font-size: 125%
+    }
+    .typing {
+        bottom: 28%;
+    }
+    .typing:after {
+        width: 5px;
+        height: 21px;
+    }
+    .heart {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/*--- Desktop-Up ---*/
+@media (min-width: 75em) {
+    html {
+        font-size: 150%
+    }
+    .typing {
+        bottom: 30%;
+    }
+    .typing:after {
+        width: 5px;
+        height: 21px;
+    }
+    .heart {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/*--- Big-Desktop-Up ---*/
+@media (min-width: 112.5em) {
+    html {
+        font-size: 133.3%
+    }
+    .typing {
+        bottom: 30%;
+    }
+    .typing:after {
+        width: 5px;
+        height: 21px;
+    }
+    .heart {
+        width: 100px;
+        height: 100px;
+    }
+}
+</style>
 </head>
-
 <body>
-  <nav>
-    <ul>
-      <li><a href="#course-1">学习网站</a></li>
-      <li><a href="#course-2">Linux学习</a></li>
-      <li><a href="#course-3">计算机网络编程</a></li>
-      <li><a href="#course-4">C++开发</a></li>
-      <li><a href="#course-5">前端入门</a></li>
-      <li><a href="#course-6">数据库学习</a></li>
-      <li><a href="#course-7">项目学习</a></li>
-      <li><a href="#course-8">算法刷题</a></li>
-      <li><a href="#course-9">杂七杂八</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <div class="search-box">
-      <form>
-        <input type="text" placeholder="搜索">
-        <input type="submit" value="搜索">
-      </form>
-    </div>
-
-    <ul class="course-list">
-      <li id="course-1">
-        <h2>学习网站</h2>
-        <p><a href="https://github.com/lewgar/mywebsite">Github</a></p>
-        <p><a href="https://leetcode.com/">LeetCode</a></p>
-        <p><a href="https://www.bilibili.com/">bilibili</a></p>
-        <p><a href="https://time.geekbang.org/">极客时间</a></p>
-        <p><a href="https://juejin.cn/">掘金</a></p>
-        <p><a href="https://blog.csdn.net/qq_46017342?type=blog">CSDN</a></p>
-        <p><a href="#">牛客网</a></p>
-        <p><a href="#">某GPT</a></p>
-        <p><a href="#">Embedded.com</a></p>
-        <p><a href="https://space.bilibili.com/37974444">黑马程序员</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-      </li>
-      <li id="course-2">
-        <h2>Linux学习</h2>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接9</a></p>
-      </li>
-      <li id="course-3">
-        <h2>计算机网络编程</h2>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-      </li>
-
-      <li id="course-4">
-        <h2>C++开发</h2>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-      </li>
-      <li id="course-5">
-        <h2>前端入门</h2>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-      </li>
-      <li id="course-6">
-        <h2>数据库学习</h2>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-      </li>
-      <li id="course-7">
-        <h2>项目学习</h2>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-      </li>
-      <li id="course-8">
-        <h2>算法刷题</h2>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <p><a href="#">链接3</a></p>
-      </li>
-       </ul>
-      <!--div class="hot-news">
-    <!-- 热点咨询 -->
-    <!--h3>我的CSDN 文章<a href="https://blog.csdn.net/qq_46017342?type=blog" style="color:green">(点击进入)</a></h3>
-    <iframe src="https://blog.csdn.net/qq_46017342?type=blog" frameborder="0" width="100%" height="600"></iframe>
-  </div-->
-	
-    <!-- 侧栏容器 -->
-
-    <div class="hot-news">
-      <h3>CSDN 热点咨询</h3>
-      <ul>
-        <li><a href="#">文章1</a></li>
-        <li><a href="#">文章2</a></li>
-        <li><a href="#">文章3</a></li>
-      </ul>
-    </div>
-
-  </main>
-
-  <script src="script.js"></script>
+<!-- partial:index.partial.html -->
+<body>
+    <div class="heart"></div>
+    <div class="typing"></div>
+    <script src="js/script.js"></script>
 </body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+<script>
+/*/////SCRIPT SHEET FOR BEATING HEART WITH TEXT/////*/
 
+const words = ['锦怡'];
+let count = 0;
+let index = 0;
+let currentWords = '';
+let letter = '';
+
+(function type() {
+    if (count === words.length) {
+        count = 0;
+
+    }
+    currentWords = words[count];
+    letter = currentWords.slice(0, ++index);
+    document.querySelector('.typing').textContent = letter;
+
+    if (letter.length === currentWords.length) {
+        count++;
+        index = 0;
+    }
+    setTimeout(type, 500);
+})();
+</script>
+</body>
 </html>
